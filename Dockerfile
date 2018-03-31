@@ -23,9 +23,17 @@ RUN     sudo add-apt-repository ppa:webupd8team/java && \
         sudo apt-get install  -y oracle-java6-set-default
 
 
+
+RUN apt-get install -y \
+    bc \
+    rsync
+
+
 RUN     echo 'user ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers
 RUN     useradd user -u 1000 -U -m -d /user
 VOLUME  /user
 WORKDIR /user
 USER    user
 ENV     USER=user
+
+
