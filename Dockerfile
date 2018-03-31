@@ -26,7 +26,8 @@ RUN     sudo add-apt-repository ppa:webupd8team/java && \
 
 RUN apt-get install -y \
     bc \
-    rsync
+    rsync \
+    libelf-dev
 
 
 RUN     echo 'user ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers
