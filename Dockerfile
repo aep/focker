@@ -28,3 +28,4 @@ RUN     useradd user -u 1000 -U -m -d /user
 VOLUME  /user
 WORKDIR /user
 USER    user
+ENV     USER=user
